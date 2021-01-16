@@ -1,6 +1,7 @@
 {
   "name": "angular",
   "version": "0.0.0",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,6 +23,8 @@
     "@fullcalendar/angular": "^5.5.0",
     "@fullcalendar/daygrid": "^5.5.0",
     "@fullcalendar/interaction": "^5.5.0",
+    "@sweetalert2/ngx-sweetalert2": "^9.0.0",
+    "bootstrap": "^4.5.3",
     "rxjs": "~6.4.0",
     "sweetalert2": "^10.13.0",
     "tslib": "^1.10.0",
