@@ -22,8 +22,12 @@ export const createEvent = async (req, res) => {
 
     try {
         await newEvent.save();
-
-        res.status(201).json(newEvent);
+        res.status(201).json(
+            {
+                type: "success",
+                message: "Event has been added successfully"
+            }
+        );
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
