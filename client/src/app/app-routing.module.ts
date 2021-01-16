@@ -5,6 +5,7 @@ import { AddEventComponent } from './pages/calendar/add-event/add-event.componen
 
 
 const routes: Routes = [
+  { path: '', component: CalendarComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'add-event', component: AddEventComponent}
 ]
