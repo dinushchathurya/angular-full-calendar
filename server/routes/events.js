@@ -4,8 +4,8 @@ import { getEvents, createEvent, deleteEvent } from '../controllers/events.js';
 
 const router = express.Router();
 
-router.get('/', getEvents);
-router.post('/', createEvent);
-router.delete('/:id', deleteEvent);
+router.get('/get_events', getEvents);
+router.post('/add_events', createEvent);
+router.delete('/delete_event/:id', deleteEvent);
 
 export default router;
