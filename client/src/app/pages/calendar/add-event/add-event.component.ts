@@ -32,7 +32,6 @@ export class AddEventComponent implements OnInit {
     this.apiService.addEvent(event)
       .subscribe(
         (response: any) => {
-          console.log(response);
           if (response.type === 'success') {
             Swal.fire({
               position: 'center',
@@ -40,7 +39,7 @@ export class AddEventComponent implements OnInit {
               title: 'Your Event has been added successfully',
               showConfirmButton: false,
               timer: 1500
-            })
+            });
             this.router.navigate(['/calendar']);
           }
         },
