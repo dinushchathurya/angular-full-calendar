@@ -9,7 +9,7 @@ import { throwError } from 'rxjs';
 })
 export class ApiServiceService {
 
-  baseUrl = 'http://localhost/5000/events/';
+  baseUrl = 'http://localhost:5000/events/';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
   window: any;
@@ -21,7 +21,7 @@ export class ApiServiceService {
 
   // Add Event to Calender//
   addEvent(event) {
-    return this.http.post(this.baseUrl + 'add_event', event);
+    return this.http.post(this.baseUrl + 'add_events', event);
   }
 
   // Get All Events //
@@ -29,6 +29,7 @@ export class ApiServiceService {
     return this.http.get(this.baseUrl + 'get_events').
       pipe(
         map((data: any) => {
+          console.log(data);
           return data;
         }), catchError(error => {
           return throwError('Something went wrong');
